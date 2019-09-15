@@ -5,11 +5,9 @@
 
     <style type="text/css">
 
-
         h1 {
             text-align: center;
         }
-
 
         table, th, td {
             border: none;
@@ -29,19 +27,18 @@
 
     <script Language='JavaScript'>
 
-        var inMODCAT
-        var modelCode, topWoodCode, fretsCode, topSpecCode
-        var topGradeCode, neckWoodCode, neckCarveCode, fingerboardCode
-        var inlayCode, bridgeCode, colorCode, hardwareCode
-        var treblepuCode, middlepuCode, basspuCode, elecCode
-        var model, topWood, frets, topSpec
-        var topGrade, neckWood, neckCarve, fingerboard
-        var inlay, bridge, color, hardware
-        var treblepu, middlepu, basspu, elec
+        let modelCode, topWoodCode, fretsCode, topSpecCode;
+        let topGradeCode, neckWoodCode, neckCarveCode, fingerboardCode;
+        let inlayCode, bridgeCode, colorCode, hardwareCode;
+        let treblepuCode, middlepuCode, basspuCode, elecCode;
+        let model, topWood, frets, topSpec;
+        let topGrade, neckWood, neckCarve, fingerboard;
+        let inlay, bridge, color, hardware;
+        let treblepu, middlepu, basspu, elec;
 
 
         function decodeMODCAT(modcat){
-            inMODCAT = modcat.replace(/\s+/g,"")
+            let inMODCAT = modcat.replace(/\s+/g,"")
             inMODCAT = inMODCAT.replace(/-/g, "_")
             inMODCAT = inMODCAT.replace(/\^/g, "_")
             inMODCAT = inMODCAT.trim()
@@ -49,7 +46,6 @@
             setCodeVals(inMODCAT)
             getMODCATvals()
             setFieldVals()
-
         }
 
         function getMODCATvals(){
@@ -72,9 +68,9 @@
         }
 
         function getMODCATstring(spec, specName){
-            var returnString
-            var specCode = eval(spec + "Code")
-            var modcatKey = spec + specCode
+            let returnString
+            let specCode = eval(spec + "Code")
+            let modcatKey = spec + specCode
 
             try{
                 returnString = eval(modcatKey);
@@ -86,7 +82,7 @@
         }
 
         function setCodeVals(m){
-            var arr = m.split("")
+            let arr = m.split("")
             modelCode = arr[0] + arr[1]
             topWoodCode = arr[2]
             fretsCode = arr[3]
@@ -167,10 +163,7 @@
     </table>
     <p></p>
     <p>A sample MODCAT:  SLM2FAHFIET_FR_HB-BS </p>
-    <p>Javascript courtesy TFC</p>
-    <p>Decoder hosted for rugerpc by Tora Graphics</p>
-    <p>Last update 12/13/13</p>
-    <p>Post additions/corrections <A HREF="http://www.prsguitars.com/forum/showthread.php?6650-213-MODCAT-Decoders">here.</a></p>
+    <p>Original Javascript courtesy TFC</p>
 </div>
 
 </body>
