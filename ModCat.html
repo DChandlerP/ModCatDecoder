@@ -5,7 +5,6 @@
     <link href="styles.css" rel="stylesheet">
 
     <script>
-        
         let modelCode, topWoodCode, fretsCode, topSpecCode;
         let topGradeCode, neckWoodCode, neckCarveCode, fingerboardCode;
         let inlayCode, bridgeCode, colorCode, hardwareCode;
@@ -61,33 +60,32 @@
             colorCode = tempColor.replace(/_/g, "")
         };
 
-        const getMODCATstring = (spec, specName) => {
-            let returnString, specCode = eval(spec + "Code"), modcatKey = spec + specCode;
-            try{
-                returnString = eval(modcatKey);
-            } catch(err){
-                returnString = "Could not find " + specName + " '" + specCode + "'"
+        const getMODCATstring = (string, array, specName) => {
+            const modcatKey = string + array;
+            if(prs[modcatKey]){
+                return prs[modcatKey];
+            } else {
+                return "Could not find " + specName + " '" + array + "'"
             }
-            return returnString;
         };
 
         const setMODCATValues = () => {
-            model = getMODCATstring("model", "Model");
-            topWood = getMODCATstring("topWood", "Top Wood");
-            frets = getMODCATstring("frets", "Frets");
-            topSpec = getMODCATstring("topSpec", "Top Spec");
-            topGrade = getMODCATstring("topGrade", "Top Grade");
-            neckWood = getMODCATstring("neckWood", "Neck Wood");
-            neckCarve = getMODCATstring("neckCarve", "Neck Carve");
-            fingerboard = getMODCATstring("fingerboard", "Fingerboard Wood");
-            inlay = getMODCATstring("inlay", "Inlay");
-            bridge = getMODCATstring("bridge", "Bridge");
-            color = getMODCATstring("color", "Color");
-            hardware = getMODCATstring("hardware", "Hardware");
-            treblepu = getMODCATstring("treblepu", "Treble Pickup");
-            middlepu = getMODCATstring("middlepu", "Middle Pickup");
-            basspu = getMODCATstring("basspu", "Bass Pickup");
-            elec = getMODCATstring("elec", "Electronics")
+            model = getMODCATstring("model", modelCode, "Model");
+            topWood = getMODCATstring("topWood", topWoodCode, "Top Wood");
+            frets = getMODCATstring("frets", fretsCode, "Frets");
+            topSpec = getMODCATstring("topSpec", topSpecCode, "Top Spec");
+            topGrade = getMODCATstring("topGrade", topGradeCode, "Top Grade");
+            neckWood = getMODCATstring("neckWood", neckWoodCode, "Neck Wood");
+            neckCarve = getMODCATstring("neckCarve", neckCarveCode, "Neck Carve");
+            fingerboard = getMODCATstring("fingerboard", fingerboardCode, "Fingerboard Wood");
+            inlay = getMODCATstring("inlay", inlayCode, "Inlay");
+            bridge = getMODCATstring("bridge", bridgeCode, "Bridge");
+            color = getMODCATstring("color", colorCode, "Color");
+            hardware = getMODCATstring("hardware", hardwareCode, "Hardware");
+            treblepu = getMODCATstring("treblepu",treblepuCode, "Treble Pickup");
+            middlepu = getMODCATstring("middlepu",middlepuCode, "Middle Pickup");
+            basspu = getMODCATstring("basspu", basspuCode, "Bass Pickup");
+            elec = getMODCATstring("elec", elecCode, "Electronics");
         };
 
         const decodeMODCAT = modcat => {
@@ -100,17 +98,6 @@
             setMODCATValues();
             setFieldValues()
         };
-
-        
-
-
-
-        
-
-
-
-
-
     </script>
 
 </head>
