@@ -1,11 +1,7 @@
-let modelCode, topWoodCode, fretsCode, topSpecCode;
-let topGradeCode, neckWoodCode, neckCarveCode, fingerboardCode;
-let inlayCode, bridgeCode, colorCode, hardwareCode;
-let treblepuCode, middlepuCode, basspuCode, elecCode;
-let model, topWood, frets, topSpec;
-let topGrade, neckWood, neckCarve, fingerboard;
-let inlay, bridge, color, hardware;
-let treblepu, middlepu, basspu, elec;
+let modelCode, topWoodCode, fretsCode, topSpecCode, topGradeCode, neckWoodCode, neckCarveCode, fingerboardCode;
+let inlayCode, bridgeCode, colorCode, hardwareCode, treblepuCode, middlepuCode, basspuCode, elecCode;
+let model, topWood, frets, topSpec, topGrade, neckWood, neckCarve, fingerboard;
+let inlay, bridge, color, hardware, treblepu, middlepu, basspu, elec;
 
 const setValues = (field, value) => {
     document.getElementById(field).innerHTML = value
