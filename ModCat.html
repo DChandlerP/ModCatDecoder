@@ -5,7 +5,7 @@
     <link href="styles.css" rel="stylesheet">
 
     <script>
-
+        
         let modelCode, topWoodCode, fretsCode, topSpecCode;
         let topGradeCode, neckWoodCode, neckCarveCode, fingerboardCode;
         let inlayCode, bridgeCode, colorCode, hardwareCode;
@@ -15,49 +15,30 @@
         let inlay, bridge, color, hardware;
         let treblepu, middlepu, basspu, elec;
 
+        const setValues = (field, value) => {
+            document.getElementById(field).innerHTML = value
+        };
 
-        function decodeMODCAT(modcat){
-            let inMODCAT = modcat.replace(/\s+/g,"");
-            inMODCAT = inMODCAT.replace(/-/g, "_");
-            inMODCAT = inMODCAT.replace(/\^/g, "_");
-            inMODCAT = inMODCAT.trim();
-            inMODCAT = inMODCAT.toUpperCase();
-            setCodeVals(inMODCAT);
-            getMODCATvals();
-            setFieldVals()
-        }
+        const setFieldValues = () => {
+            setValues("modelField", model);
+            setValues("topWoodField", topWood);
+            setValues("fretsField", frets);
+            setValues("topSpecField", topSpec);
+            setValues("topGradeField", topGrade);
+            setValues("neckWoodField", neckWood);
+            setValues("neckCarveField", neckCarve);
+            setValues("fingerboardField", fingerboard);
+            setValues("inlayField", inlay);
+            setValues("bridgeField", bridge);
+            setValues("colorField", color);
+            setValues("hardwareField", hardware);
+            setValues("treblepuField", treblepu);
+            setValues("middlepuField", middlepu);
+            setValues("basspuField", basspu);
+            setValues("elecField", elec)
+        };
 
-        function getMODCATvals(){
-            model = getMODCATstring("model", "Model");
-            topWood = getMODCATstring("topWood", "Top Wood");
-            frets = getMODCATstring("frets", "Frets");
-            topSpec = getMODCATstring("topSpec", "Top Spec");
-            topGrade = getMODCATstring("topGrade", "Top Grade");
-            neckWood = getMODCATstring("neckWood", "Neck Wood");
-            neckCarve = getMODCATstring("neckCarve", "Neck Carve");
-            fingerboard = getMODCATstring("fingerboard", "Fingerboard Wood");
-            inlay = getMODCATstring("inlay", "Inlay");
-            bridge = getMODCATstring("bridge", "Bridge");
-            color = getMODCATstring("color", "Color");
-            hardware = getMODCATstring("hardware", "Hardware");
-            treblepu = getMODCATstring("treblepu", "Treble Pickup");
-            middlepu = getMODCATstring("middlepu", "Middle Pickup");
-            basspu = getMODCATstring("basspu", "Bass Pickup");
-            elec = getMODCATstring("elec", "Electronics")
-        }
-
-        function getMODCATstring(spec, specName){
-            let returnString, specCode = eval(spec + "Code"), modcatKey = spec + specCode;
-            try{
-                returnString = eval(modcatKey);
-            } catch(err){
-                returnString = "Could not find " + specName + " '" + specCode + "'"
-            }
-
-            return returnString;
-        }
-
-        function setCodeVals(m){
+        const setCodeValues = m => {
             let arr = m.split("");
             modelCode = arr[0] + arr[1];
             topWoodCode = arr[2];
@@ -78,30 +59,57 @@
             // At least one color code has 3 characters, so need to accommodate that.
             tempColor = arr[11] + arr[12] + arr[13] + arr[14];
             colorCode = tempColor.replace(/_/g, "")
-        }
+        };
 
-        function setFieldVals(){
-            setVal("modelField", model);
-            setVal("topWoodField", topWood);
-            setVal("fretsField", frets);
-            setVal("topSpecField", topSpec);
-            setVal("topGradeField", topGrade);
-            setVal("neckWoodField", neckWood);
-            setVal("neckCarveField", neckCarve);
-            setVal("fingerboardField", fingerboard);
-            setVal("inlayField", inlay);
-            setVal("bridgeField", bridge);
-            setVal("colorField", color);
-            setVal("hardwareField", hardware);
-            setVal("treblepuField", treblepu);
-            setVal("middlepuField", middlepu);
-            setVal("basspuField", basspu);
-            setVal("elecField", elec)
-        }
+        const getMODCATstring = (spec, specName) => {
+            let returnString, specCode = eval(spec + "Code"), modcatKey = spec + specCode;
+            try{
+                returnString = eval(modcatKey);
+            } catch(err){
+                returnString = "Could not find " + specName + " '" + specCode + "'"
+            }
+            return returnString;
+        };
 
-        function setVal(field, value){
-            document.getElementById(field).innerHTML = value
-        }
+        const setMODCATValues = () => {
+            model = getMODCATstring("model", "Model");
+            topWood = getMODCATstring("topWood", "Top Wood");
+            frets = getMODCATstring("frets", "Frets");
+            topSpec = getMODCATstring("topSpec", "Top Spec");
+            topGrade = getMODCATstring("topGrade", "Top Grade");
+            neckWood = getMODCATstring("neckWood", "Neck Wood");
+            neckCarve = getMODCATstring("neckCarve", "Neck Carve");
+            fingerboard = getMODCATstring("fingerboard", "Fingerboard Wood");
+            inlay = getMODCATstring("inlay", "Inlay");
+            bridge = getMODCATstring("bridge", "Bridge");
+            color = getMODCATstring("color", "Color");
+            hardware = getMODCATstring("hardware", "Hardware");
+            treblepu = getMODCATstring("treblepu", "Treble Pickup");
+            middlepu = getMODCATstring("middlepu", "Middle Pickup");
+            basspu = getMODCATstring("basspu", "Bass Pickup");
+            elec = getMODCATstring("elec", "Electronics")
+        };
+
+        const decodeMODCAT = modcat => {
+            let inMODCAT = modcat.replace(/\s+/g,"");
+            inMODCAT = inMODCAT.replace(/-/g, "_");
+            inMODCAT = inMODCAT.replace(/\^/g, "_");
+            inMODCAT = inMODCAT.trim();
+            inMODCAT = inMODCAT.toUpperCase();
+            setCodeValues(inMODCAT);
+            setMODCATValues();
+            setFieldValues()
+        };
+
+        
+
+
+
+        
+
+
+
+
 
     </script>
 
@@ -110,7 +118,6 @@
 <body>
 
 <div align="center" id="mainDiv">
-    <IMG SRC="guitaroutline.jpg">
     <h1>PRS MODCAT DECODER</h1>
 
     Enter MODCAT: <input id="theMODCAT" size="30" type="text">
