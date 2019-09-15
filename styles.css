@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+}
+
+table, th, td {
+    border: none;
+    font-family: sans-serif;
+}
+
+td.label {
+    text-align: right;
+
+}
+
+span {
+    font-weight: bold;
+}
