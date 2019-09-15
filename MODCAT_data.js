@@ -434,3 +434,5 @@ const prs = {
     elecX : "3-Way Toggle with Tap",
     elecZ : "Piezo (Hollowbody)"
 };
+
+Object.freeze(prs);
