@@ -23,6 +23,7 @@ const prs = {
     modelD3 : "DC3",
     modelDG : "David Grissom",
     modelDN : "Dave Navarro",
+    modelEX : "Experience PRS 2018", //Experience 2018 Paul's Guitar ... n=1
     modelF3 : "NF3",
     modelFN : "509",
     modelFT : "513",
@@ -98,12 +99,14 @@ const prs = {
     topSpec_ : "Non-Figured",
 
     topGradeA : "Artist",
+    topGradeP : "Private Stock", //Looking for more data to confirm
     topGradeS : "Select",
     topGradeT : "Ten Top",
     topGrade_ : "Non-Ten Top",
 
     neckWoodB : "Brazilian Rosewood (Domestic)",
     neckWoodF : "Figured Maple",
+    neckWoodC : "Mahogany", // Found on one Experience 2018 Paul's Guitar
     neckWoodG : "Madagascar Rosewood",
     neckWoodH : "Mahogany",
     neckWoodI : "East Indian Rosewood",
@@ -142,6 +145,7 @@ const prs = {
     fingerboardN : "Honduran Rosewood",
     fingerboardO : "Cocobolo",
     fingerboardP : "Pau Ferro",
+    fingerboardX : "Xircote",
     fingerboardZ : "Brazilian Rosewood (International)",
 
     inlay2 : "20th Anniv. Birds (in flight)",
@@ -160,6 +164,7 @@ const prs = {
     inlayM : "Moons (pre-2008)",
     inlayN : "Ring Dots",
     inlayP : "Paua Birds",
+    inlayX : "Brushstroke Birds and \"Pre-Factory\" Small Eagle Headstock Inlay",
     inlayQ : "Shadow Birds (25th Ann.)",
     inlayS : "Brush Stroke Birds",
     inlayT : "Tremonti",
@@ -212,6 +217,7 @@ const prs = {
     colorCV : "Cherry Vanilla Burst",
     colorCY : "Cranberry",
     colorDB : "Dirty Blonde",
+    colorDD : "Black Gold Nitro",
     colorDS : "Dark Cherry Sunburst",
     colorDW : "Dark Cherry Wraparound",
     colorEG : "Emerald Green",
@@ -341,7 +347,7 @@ const prs = {
     treblepu8 : "57/08 Uncovered",
     treblepu9 : "59/09",
     treblepuA : "Dragon or Artist V",
-    treblepuB : "408 or Bass",
+    treblepuB : "408 or Paul's Guitar", //may also be bass?
     treblepuC : "513 Humbucker or 305 Single Coil",
     treblepuD : "Dragon 2",
     treblepuE : "12 String",
@@ -383,7 +389,7 @@ const prs = {
     basspu8 : "57/08 Uncovered",
     basspu9 : "59/09",
     basspuA : "Dragon or Artist V",
-    basspuB : "408 or Bass",
+    basspuB : "408 or Paul's Guitar", //may also be bass?
     basspuC : "513 Humbucker or 305 Single",
     basspuD : "Dragon 2",
     basspuE : "12 String",
@@ -412,7 +418,7 @@ const prs = {
     elec5 : "5-Way Rotary",
     elec7 : "Singlecut",
     elec9 : "509",
-    elecA : "Bass",
+    elecA : "Paul's", //May also be bass?
     elecB : "5-Way Blade or Grainger Bass 4/5",
     elecF : "513",
     elecK : "McCarty 594",
