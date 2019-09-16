@@ -52,6 +52,7 @@ const prs = {
     modelDG : "David Grissom",
     modelDN : "Dave Navarro",
     modelF3 : "NF3",
+    modelFN : "509",
     modelFT : "513",
     modelG4 : "Grainger Bass 4",
     modelG5 : "Grainger Bass 5",
@@ -163,6 +164,7 @@ const prs = {
     inlay2 : "20th Anniv. Birds (in flight)",
     inlay4 : "2011 Birds",
     inlay5 : "2013 Birds",
+    inlay6 : "2014+ Birds",
     inlayA : "Artist Package Birds",
     inlayB : "Original Solid Birds (pre-2008)",
     inlayD : "Dots",
@@ -180,6 +182,7 @@ const prs = {
 
 // BRIDGE
     bridge2 : "2-Piece Bridge",
+    bridge3 : "Gen III Tremolo",
     bridge4 : "Grainger Bass 4",
     bridge5 : "Grainger Bass 5",
     bridgeA : "Adjustable Stoptail",
@@ -342,6 +345,7 @@ const prs = {
     hardwareN : "Nickel",
 
 // TREBLE PICKUP
+    treblepu2 : "509 Humbucker",
     treblepu3 : "Santana 3",
     treblepu4 : "Mira or 245",
     treblepu5 : "250",
@@ -374,6 +378,7 @@ const prs = {
     treblepuZ : "Narrowfield",
 
 // MIDDLE PICKUP
+    middlepu3 : "509 Single Coil",
     middlepuC : "513 or 305 Single Coil",
     middlepuE : "12 String (Fralin)",
     middlepuH : "Henderson",
@@ -383,6 +388,7 @@ const prs = {
     middlepu_ : "none",
 
 // BASS PICKUP
+    basspu2 : "509 Humbucker",
     basspu3 : "Santana 3",
     basspu4 : "Mira or 245",
     basspu5 : "250",
@@ -419,6 +425,7 @@ const prs = {
     elec4 : "408",
     elec5 : "5-Way Rotary",
     elec7 : "Singlecut",
+    elec9 : "509",
     elecA : "Bass",
     elecB : "5-Way Blade or Grainger Bass 4/5",
     elecF : "513",
