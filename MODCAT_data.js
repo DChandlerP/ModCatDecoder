@@ -1,5 +1,6 @@
 const prs = {
     model18 : "KL1812",
+    model38: "KL380",
     model48 : "408 Maple/Std Model",
     model4N : "Neal Schon 14",
     model5N : "Neal Schon 15",
@@ -7,6 +8,7 @@ const prs = {
     modelAD : "Al Di Meola",
     modelB4 : "Bass",
     modelBM : "Brent Mason",
+    modelBS :"Brushstroke",
     modelCA : "Artist V",
     modelCD : "DC245",
     modelCE : "Classic Electric",
