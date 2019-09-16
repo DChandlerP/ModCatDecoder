@@ -1,35 +1,3 @@
-/************************************
-
- Format:
- KEY:"VALUE"
-
- KEYs are comprised of the property of the guitar that is being specified and the MODCAT code
- VALUEs are what the specific segments of the MODCAT codes refer to, enclosed in quotations.
-
- For example, the KEY for the David Grissom Trem model is:
- modelDG
-
- The value for the David Grissom Trem model is:
- "David Grissom"
-
- NOTE: DO NOT USE A HYPHEN "-" FOR ANY KEYS. REPLACE THE HYPHEN WITH AN UNDERSCORE "_". HYPHENS ARE FINE FOR VALUES.
-
- e.g.
-
- The following will cause the program to fail:
- topSpec-:"Non-Figured"
-
- Instead, use this:
- topSpec_:"Non-Figured"
-
- Entries do not need to be in alphabetical order, but ordering them alphabetically makes it easier to local specific codes.
-
-
-
- **************************************/
-
-
-// MODEL
 const prs = {
     model18 : "KL1812",
     model48 : "408 Maple/Std Model",
@@ -96,7 +64,6 @@ const prs = {
     modelTT : "Tremonti Trem",
     modelUD : "Studio",
 
-// BODY/TOP WOOD
     topWoodA : "Alder",
     topWoodH : "Mahogany",
     topWoodK : "Korina",
@@ -104,12 +71,10 @@ const prs = {
     topWoodS : "Swamp Ash",
     topWoodU : "Spruce",
 
-// FRETS
     frets1 : "21",
     frets2 : "22",
     frets4 : "24",
 
-// TOP SPEC
     topSpecF : "Figured Maple",
     topSpecQ : "Quilted Maple",
     topSpec_ : "Non-Figured",
@@ -118,7 +83,6 @@ const prs = {
     topGradeT : "Ten Top",
     topGrade_ : "Non-Ten Top",
 
-// NECK WOOD
     neckWoodB : "Brazilian Rosewood (Domestic)",
     neckWoodF : "Figured Maple",
     neckWoodG : "Madagascar Rosewood",
@@ -133,7 +97,6 @@ const prs = {
     neckWoodS : "Sipo",
     neckWoodZ : "Brazilian Rosewood (International)",
 
-// NECK CARVE
     neckCarve4 : "Grainger Bass 4",
     neckCarve5 : "Grainger Bass 5",
     neckCarveA : "Santana",
@@ -145,7 +108,6 @@ const prs = {
     neckCarveT : "Pattern/Thin (Wide/Thin)",
     neckCarveW : "Twelve String",
 
-// FINGERBOARD
     fingerboardA : "African Blackwood",
     fingerboardB : "Brazilian Rosewood (Domestic)",
     fingerboardC : "Macassar Ebony",
@@ -160,7 +122,6 @@ const prs = {
     fingerboardO : "Cocobolo",
     fingerboardZ : "Brazilian Rosewood (International)",
 
-// INLAY
     inlay2 : "20th Anniv. Birds (in flight)",
     inlay4 : "2011 Birds",
     inlay5 : "2013 Birds",
@@ -180,7 +141,6 @@ const prs = {
     inlayS : "Brush Stroke Birds",
     inlayT : "Tremonti",
 
-// BRIDGE
     bridge2 : "2-Piece Bridge",
     bridge3 : "Gen III Tremolo",
     bridge4 : "Grainger Bass 4",
@@ -193,7 +153,6 @@ const prs = {
     bridgeS : "Straight Stoptail",
     bridgeT : "Tremolo or 2-Piece Bridge",
 
-// COLORS
     colorAA : "Armando's Amethyst",
     colorAB : "Abalone",
     colorAF : "Faded Abalone",
@@ -339,12 +298,10 @@ const prs = {
     colorWW : "White Wash",
     colorYI : "Yellow Tiger",
 
-// HARDWARE
     hardwareG : "Gold",
     hardwareH : "Hybrid (Nickel and Gold)",
     hardwareN : "Nickel",
 
-// TREBLE PICKUP
     treblepu2 : "509 Humbucker",
     treblepu3 : "Santana 3",
     treblepu4 : "Mira or 245",
@@ -377,7 +334,6 @@ const prs = {
     treblepuY : "Santana Maryland",
     treblepuZ : "Narrowfield",
 
-// MIDDLE PICKUP
     middlepu3 : "509 Single Coil",
     middlepuC : "513 or 305 Single Coil",
     middlepuE : "12 String (Fralin)",
@@ -387,7 +343,6 @@ const prs = {
     middlepuZ : "Narrowfield",
     middlepu_ : "none",
 
-// BASS PICKUP
     basspu2 : "509 Humbucker",
     basspu3 : "Santana 3",
     basspu4 : "Mira or 245",
@@ -420,7 +375,6 @@ const prs = {
     basspuY : "Santana Maryland",
     basspuZ : "Narrowfield",
 
-// ELECTRONICS
     elec3 : "3-Way Toggle or Blade",
     elec4 : "408",
     elec5 : "5-Way Rotary",

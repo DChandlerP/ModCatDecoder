@@ -1,132 +1,33 @@
-
 <head>
     <title>PRS MODCAT Decoder</title>
-    <script src="MODCAT_data.js" type="text/javascript"></script>
+    <script src="MODCAT_data.js" ></script>
+    <script src="decode.js" type="text/javascript"></script>
     <link href="styles.css" rel="stylesheet">
-
-    <script>
-        let modelCode, topWoodCode, fretsCode, topSpecCode;
-        let topGradeCode, neckWoodCode, neckCarveCode, fingerboardCode;
-        let inlayCode, bridgeCode, colorCode, hardwareCode;
-        let treblepuCode, middlepuCode, basspuCode, elecCode;
-        let model, topWood, frets, topSpec;
-        let topGrade, neckWood, neckCarve, fingerboard;
-        let inlay, bridge, color, hardware;
-        let treblepu, middlepu, basspu, elec;
-
-        const setValues = (field, value) => {
-            document.getElementById(field).innerHTML = value
-        };
-
-        const setFieldValues = () => {
-            setValues("modelField", model);
-            setValues("topWoodField", topWood);
-            setValues("fretsField", frets);
-            setValues("topSpecField", topSpec);
-            setValues("topGradeField", topGrade);
-            setValues("neckWoodField", neckWood);
-            setValues("neckCarveField", neckCarve);
-            setValues("fingerboardField", fingerboard);
-            setValues("inlayField", inlay);
-            setValues("bridgeField", bridge);
-            setValues("colorField", color);
-            setValues("hardwareField", hardware);
-            setValues("treblepuField", treblepu);
-            setValues("middlepuField", middlepu);
-            setValues("basspuField", basspu);
-            setValues("elecField", elec)
-        };
-
-        const setCodeValues = m => {
-            let arr = m.split("");
-            modelCode = arr[0] + arr[1];
-            topWoodCode = arr[2];
-            fretsCode = arr[3];
-            topSpecCode = arr[4];
-            topGradeCode = arr[5];
-            neckWoodCode = arr[6];
-            neckCarveCode = arr[7];
-            fingerboardCode = arr[8];
-            inlayCode = arr[9];
-            bridgeCode = arr[10];
-            hardwareCode = arr[15];
-            treblepuCode = arr[16];
-            middlepuCode = arr[17];
-            basspuCode = arr[18];
-            elecCode = arr[19];
-
-            // At least one color code has 3 characters, so need to accommodate that.
-            tempColor = arr[11] + arr[12] + arr[13] + arr[14];
-            colorCode = tempColor.replace(/_/g, "")
-        };
-
-        const getMODCATstring = (string, array, specName) => {
-            const modcatKey = string + array;
-            if(prs[modcatKey]){
-                return prs[modcatKey];
-            } else {
-                return "Could not find " + specName + " '" + array + "'"
-            }
-        };
-
-        const setMODCATValues = () => {
-            model = getMODCATstring("model", modelCode, "Model");
-            topWood = getMODCATstring("topWood", topWoodCode, "Top Wood");
-            frets = getMODCATstring("frets", fretsCode, "Frets");
-            topSpec = getMODCATstring("topSpec", topSpecCode, "Top Spec");
-            topGrade = getMODCATstring("topGrade", topGradeCode, "Top Grade");
-            neckWood = getMODCATstring("neckWood", neckWoodCode, "Neck Wood");
-            neckCarve = getMODCATstring("neckCarve", neckCarveCode, "Neck Carve");
-            fingerboard = getMODCATstring("fingerboard", fingerboardCode, "Fingerboard Wood");
-            inlay = getMODCATstring("inlay", inlayCode, "Inlay");
-            bridge = getMODCATstring("bridge", bridgeCode, "Bridge");
-            color = getMODCATstring("color", colorCode, "Color");
-            hardware = getMODCATstring("hardware", hardwareCode, "Hardware");
-            treblepu = getMODCATstring("treblepu",treblepuCode, "Treble Pickup");
-            middlepu = getMODCATstring("middlepu",middlepuCode, "Middle Pickup");
-            basspu = getMODCATstring("basspu", basspuCode, "Bass Pickup");
-            elec = getMODCATstring("elec", elecCode, "Electronics");
-        };
-
-        const decodeMODCAT = modcat => {
-            let inMODCAT = modcat.replace(/\s+/g,"");
-            inMODCAT = inMODCAT.replace(/-/g, "_");
-            inMODCAT = inMODCAT.replace(/\^/g, "_");
-            inMODCAT = inMODCAT.trim();
-            inMODCAT = inMODCAT.toUpperCase();
-            setCodeValues(inMODCAT);
-            setMODCATValues();
-            setFieldValues()
-        };
-    </script>
-
 </head>
-
 <body>
-
 <h1>PRS MODCAT DECODER</h1>
 
-Enter MODCAT: <input id="theMODCAT" size="30" type="text">
+<label for="theMODCAT">Enter MODCAT: </label><input id="theMODCAT" size="30" type="text">
 <input onClick="decodeMODCAT(document.getElementById('theMODCAT').value)" type="button" value="Decode MODCAT">
 <table id="dataTable">
-    <tr><td class="label">Model: </td><td align="left"><span id='modelField'></span></td></tr>
-    <tr><td align="right" class="label">Top Wood: </td><td align="left"><span id='topWoodField'></span></td></tr>
-    <tr><td align="right" class="label">Frets: </td><td align="left"><span id='fretsField'></span></td></tr>
-    <tr><td align="right" class="label">Top Spec: </td><td align="left"><span id='topSpecField'></span></td></tr>
-    <tr><td align="right" class="label">Top Grade: </td><td align="left"><span id='topGradeField'></span></td></tr>
-    <tr><td align="right" class="label">Neck Wood: </td><td align="left"><span id='neckWoodField'></span></td></tr>
-    <tr><td align="right" class="label">Neck Carve: </td><td align="left"><span id='neckCarveField'></span></td></tr>
-    <tr><td align="right" class="label">Fingerboard Wood: </td><td align="left"><span id='fingerboardField'></span></td></tr>
-    <tr><td align="right" class="label">Inlay: </td><td align="left"><span id='inlayField'></span></td></tr>
-    <tr><td align="right" class="label">Bridge: </td><td align="left"><span id='bridgeField'></span></td></tr>
-    <tr><td align="right" class="label">Color: </td><td align="left"><span id='colorField'></span></td></tr>
-    <tr><td align="right" class="label">Hardware: </td><td align="left"><span id='hardwareField'></span></td></tr>
-    <tr><td align="right" class="label">Treble Pickup: </td><td align="left"><span id='treblepuField'></span><br></td></tr>
-    <tr><td align="right" class="label">Middle Pickup: </td><td align="left"><span id='middlepuField'></span></td></tr>
-    <tr><td align="right" class="label">Bass Pickup: </td><td align="left"><span id='basspuField'></span></td></tr>
-    <tr><td align="right" class="label">Electronics: </td><td align="left"><span id='elecField'></span></td></tr>
+    <tr><td class="label">Model: </td><td ><span id='modelField'></span></td></tr>
+    <tr><td class="label">Top Wood: </td><td ><span id='topWoodField'></span></td></tr>
+    <tr><td class="label">Frets: </td><td ><span id='fretsField'></span></td></tr>
+    <tr><td class="label">Top Spec: </td><td ><span id='topSpecField'></span></td></tr>
+    <tr><td class="label">Top Grade: </td><td ><span id='topGradeField'></span></td></tr>
+    <tr><td class="label">Neck Wood: </td><td ><span id='neckWoodField'></span></td></tr>
+    <tr><td class="label">Neck Carve: </td><td ><span id='neckCarveField'></span></td></tr>
+    <tr><td class="label">Fingerboard Wood: </td><td ><span id='fingerboardField'></span></td></tr>
+    <tr><td class="label">Inlay: </td><td ><span id='inlayField'></span></td></tr>
+    <tr><td class="label">Bridge: </td><td ><span id='bridgeField'></span></td></tr>
+    <tr><td class="label">Color: </td><td ><span id='colorField'></span></td></tr>
+    <tr><td class="label">Hardware: </td><td ><span id='hardwareField'></span></td></tr>
+    <tr><td class="label">Treble Pickup: </td><td ><span id='treblepuField'></span><br></td></tr>
+    <tr><td class="label">Middle Pickup: </td><td ><span id='middlepuField'></span></td></tr>
+    <tr><td class="label">Bass Pickup: </td><td ><span id='basspuField'></span></td></tr>
+    <tr><td class="label">Electronics: </td><td ><span id='elecField'></span></td></tr>
 </table>
 <p></p>
 <p>A sample MODCAT:  SLM2FAHFIET_FR_HB-BS </p>
-<p><a href="http://www.toragraphics.com/modcat/index.html">Original Version</a></p>
+<a href="http://www.toragraphics.com/modcat/index.html">Original Version</a>
 </body>
