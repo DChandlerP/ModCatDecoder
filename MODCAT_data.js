@@ -23,7 +23,7 @@ const prs = {
     modelD3 : "DC3",
     modelDG : "David Grissom",
     modelDN : "Dave Navarro",
-    modelEX : "Experience PRS 2018", //Experience 2018 Paul's Guitar ... n=1
+    modelEX : "Experience PRS Limited",
     modelF3 : "NF3",
     modelFN : "509",
     modelFT : "513",
