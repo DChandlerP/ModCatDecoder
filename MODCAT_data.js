@@ -341,7 +341,7 @@ const prs = {
     treblepu2 : "509 Humbucker",
     treblepu3 : "Santana 3",
     treblepu4 : "Mira or 245",
-    treblepu5 : "250",
+    treblepu5 : "85/15 or 250",
     treblepu6 : "58/15 or PRS 6",
     treblepu7 : "PRS 7",
     treblepu8 : "57/08 Uncovered",
