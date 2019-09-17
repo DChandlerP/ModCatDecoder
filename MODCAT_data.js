@@ -141,7 +141,7 @@ const prs = {
     fingerboardN : "Honduran Rosewood",
     fingerboardO : "Cocobolo",
     fingerboardP : "Pau Ferro",
-    fingerboardX : "Xircote",
+    fingerboardX : "Ziricote",
     fingerboardZ : "Brazilian Rosewood (International)",
 
     inlay2 : "20th Anniv. Birds (in flight)",
