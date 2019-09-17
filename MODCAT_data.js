@@ -89,7 +89,6 @@ const prs = {
     frets2 : "22",
     frets4 : "24",
 
-
     topSpecB : "Burled",
     topSpecF : "Figured",
     topSpecQ : "Quilted",
