@@ -422,9 +422,9 @@ const prs = {
     elecA : "Paul's", //May also be bass?
     elecB : "5-Way Blade or Grainger Bass 4/5",
     elecF : "513",
-    elecK : "McCarty 594",
-
     elecH : "Henderson",
+	elecJ : "Starla",
+	elecK : "McCarty 594",
     elecM : "McCarty",
     elecN : "Santana",
     elecO : "Grissom",
