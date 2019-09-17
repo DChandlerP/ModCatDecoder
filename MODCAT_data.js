@@ -90,9 +90,9 @@ const prs = {
     frets4 : "24",
 
 
-    topSpecB : "Burled Maple",
-    topSpecF : "Figured Maple",
-    topSpecQ : "Quilted Maple",
+    topSpecB : "Burled",
+    topSpecF : "Figured",
+    topSpecQ : "Quilted",
     topSpec_ : "Non-Figured",
 
     topGradeA : "Artist",
