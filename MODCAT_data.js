@@ -95,6 +95,7 @@ const prs = {
     topSpec_ : "Non-Figured",
 
     topGradeA : "Artist",
+    topGradeP : "Private Stock", //Looking for more data to confirm
     topGradeS : "Select",
     topGradeT : "Ten Top",
     topGrade_ : "Non-Ten Top",
