@@ -34,6 +34,7 @@ const prs = {
     modelH2 : "Hollowbody II",
     modelHO : "Hollowbody I/Spruce",
     modelHT : "Hollowbody 12 String",
+    modelJ1 : "Silver Sky",
     modelJA : "JA-15",
     modelJH : "Johnny Hiland",
     modelJT : "SC Jumbo Thinline",
@@ -96,6 +97,7 @@ const prs = {
     topSpec_ : "Non-Figured",
 
     topGradeA : "Artist",
+    topGradeM : "Designation only used on Silver Sky. Meaning unknown", //So far only seen on Silver Sky
     topGradeP : "Private Stock", //Looking for more data to confirm
     topGradeS : "Select",
     topGradeT : "Ten Top",
@@ -262,6 +264,7 @@ const prs = {
     colorLM : "Platinum Metallic",
     colorLN : "Blue Crab Blue Burst/Natural",
     colorLR : "Blue Crab Blue",
+    colorMA : "McCarty Amber",
     colorMG : "Metallic Green",
     colorMK : "Makena Blue",
     colorML : "Frost Blue Metallic",
