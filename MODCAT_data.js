@@ -5,6 +5,7 @@ const prs = {
     model4N : "Neal Schon 14",
     model5N : "Neal Schon 15",
     model5M : "McCarty 594 Soapbar Limited",
+    model5S : "McCarty 594 Singlecut Soapbar Limited",
     modelAA : "Archtop Artist",
     modelAD : "Al Di Meola",
     modelAM : "Artist Model",
