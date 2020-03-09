@@ -301,6 +301,7 @@ const prs = {
     colorSE : "Sunset Burst",
     colorSF : "Solar Flare",
     colorSG : "Seafoam Green",
+    colorSL : "Slate Blue",
     colorSN : "Slate/Natural Back",
     colorSO : "Solana Burst",
     colorSR : "Scarlet Red",
