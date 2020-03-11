@@ -76,8 +76,10 @@ const setMODCATValues = () => {
 // removes whitespace replaces - with _ and everything is made uppercase
 const format = text => text.replace(/\s+/g,"").replace(/-/g, "_").toUpperCase();
 
+const format = text => text.replace(/\s+/g,"").replace(/-/g, "_").toUpperCase();
+
 const decodeMODCAT = modcat => {
-    setCodeValues(modcat);
+    setCodeValues(code);
     setMODCATValues();
     setFieldValues()
 };
