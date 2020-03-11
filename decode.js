@@ -77,13 +77,11 @@ const setMODCATValues = () => {
     elec = getMODCATstring("elec", elecCode, "Electronics");
 };
 
+const format = text => text.replace(/\s+/g,"").replace(/-/g, "_").toUpperCase();
+
 const decodeMODCAT = modcat => {
-    let inMODCAT = modcat.replace(/\s+/g,"");
-    inMODCAT = inMODCAT.replace(/-/g, "_");
-    inMODCAT = inMODCAT.replace(/\^/g, "_");
-    inMODCAT = inMODCAT.trim();
-    inMODCAT = inMODCAT.toUpperCase();
-    setCodeValues(inMODCAT);
+    const code = format(modcat); //removes whitespace & replaces dash with underscore
+    setCodeValues(code);
     setMODCATValues();
     setFieldValues()
 };
