@@ -3,13 +3,13 @@ PRS Guitars comes with what people call MODCATs which can be read to determine t
 Please help us update it and modernize the code. Below are some suggestions on what I'm hoping we can improve:
 
 ## Adding/Updating Entries for MODCAT codes
-That's really the reason why this project was formed.
+That's really the reason why this project was formed. The MODCAT_data.js file contains all the model codes. 
 
 ## UX/UI
-Right now it's a pretty basic HTML page.
+Right now it's a pretty basic HTML page. I'm sure we could make it look nicer. Help!
 
 ## Making the code easier to read and maintain.
-In some ways easier to read and maintain is subjective. I really like AirBnB's standards. 
+I suggest following AirBnB's standards: https://github.com/airbnb/javascript 
 
 ## Add Tests
 Jest or Cypress would be my preferred tools but if someone else writes them before I get to I'll learn whatever testing library or tool you use
