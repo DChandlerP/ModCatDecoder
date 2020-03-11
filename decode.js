@@ -3,9 +3,7 @@ let inlayCode, bridgeCode, colorCode, hardwareCode, treblepuCode, middlepuCode, 
 let model, topWood, frets, topSpec, topGrade, neckWood, neckCarve, fingerboard;
 let inlay, bridge, color, hardware, treblepu, middlepu, basspu, elec;
 
-const setValues = (field, value) => {
-    document.getElementById(field).innerHTML = value
-};
+const setValues = (field, value) => document.getElementById(field).innerHTML = value;
 
 const setFieldValues = () => {
     setValues("modelField", model);
