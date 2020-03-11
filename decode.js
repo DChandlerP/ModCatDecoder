@@ -26,27 +26,24 @@ const setFieldValues = () => {
     setValues("elecField", elec)
 };
 
-const setCodeValues = m => {
-    let arr = m.split("");
-    modelCode = arr[0] + arr[1];
-    topWoodCode = arr[2];
-    fretsCode = arr[3];
-    topSpecCode = arr[4];
-    topGradeCode = arr[5];
-    neckWoodCode = arr[6];
-    neckCarveCode = arr[7];
-    fingerboardCode = arr[8];
-    inlayCode = arr[9];
-    bridgeCode = arr[10];
-    hardwareCode = arr[15];
-    treblepuCode = arr[16];
-    middlepuCode = arr[17];
-    basspuCode = arr[18];
-    elecCode = arr[19];
-
-    // At least one color code has 3 characters, so need to accommodate that.
-    tempColor = arr[11] + arr[12] + arr[13] + arr[14];
-    colorCode = tempColor.replace(/_/g, "")
+const setCodeValues = str => {
+    str = format(str);
+    modelCode = str.substring(0, 2);
+    topWoodCode = str.substring(2, 3);
+    fretsCode = str.substring(3, 4);
+    topSpecCode = str.substring(4, 5);
+    topGradeCode = str.substring(5, 6);
+    neckWoodCode = str.substring(6, 7);
+    neckCarveCode = str.substring(7, 8);
+    fingerboardCode = str.substring(8, 9);
+    inlayCode = str.substring(9, 10);
+    bridgeCode = str.substring(10, 11);
+    colorCode = str.substring(11, 15).replace(/_/g, "");
+    hardwareCode = str.substring(15, 16);
+    treblepuCode = str.substring(16, 17);
+    middlepuCode = str.substring(17, 18);
+    basspuCode = str.substring(18, 19);
+    elecCode = str.substring(19, 20);
 };
 
 const getMODCATstring = (string, array, specName) => {
@@ -76,14 +73,11 @@ const setMODCATValues = () => {
     basspu = getMODCATstring("basspu", basspuCode, "Bass Pickup");
     elec = getMODCATstring("elec", elecCode, "Electronics");
 };
+// removes whitespace replaces - with _ and everything is made uppercase
+const format = text => text.replace(/\s+/g,"").replace(/-/g, "_").toUpperCase();
 
 const decodeMODCAT = modcat => {
-    let inMODCAT = modcat.replace(/\s+/g,"");
-    inMODCAT = inMODCAT.replace(/-/g, "_");
-    inMODCAT = inMODCAT.replace(/\^/g, "_");
-    inMODCAT = inMODCAT.trim();
-    inMODCAT = inMODCAT.toUpperCase();
-    setCodeValues(inMODCAT);
+    setCodeValues(modcat);
     setMODCATValues();
     setFieldValues()
 };
