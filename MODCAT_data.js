@@ -39,6 +39,7 @@ const prs = {
     modelJA : "JA-15",
     modelJH : "Johnny Hiland",
     modelJT : "SC Jumbo Thinline",
+    modelKC : "Smokeburst McCarty",
     modelM2 : "McCarty 2",
     modelM3 : "Studio",
     modelM5 : "McCarty 594",
