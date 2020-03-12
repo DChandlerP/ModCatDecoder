@@ -44,38 +44,31 @@ const getCodesFromString = str => {
     elecCode = str.substring(19, 20);
 };
 
-const getObjValue = (string, code, specName) => {
-    const modcatKey = string + code;
-    if(prs[modcatKey]){
-        return prs[modcatKey];
-    } else {
-        return "Could not find " + specName + " '" + code + "'"
-    }
-};
+const getValue = (str, code, spec) => prs[str + code] ? prs[str + code] : "Could not find " + spec + " '" + code + "'";
 
-const getObjValues = () => {
-    model = getObjValue("model", modelCode, "Model");
-    topWood = getObjValue("topWood", topWoodCode, "Top Wood");
-    frets = getObjValue("frets", fretsCode, "Frets");
-    topSpec = getObjValue("topSpec", topSpecCode, "Top Spec");
-    topGrade = getObjValue("topGrade", topGradeCode, "Top Grade");
-    neckWood = getObjValue("neckWood", neckWoodCode, "Neck Wood");
-    neckCarve = getObjValue("neckCarve", neckCarveCode, "Neck Carve");
-    fingerboard = getObjValue("fingerboard", fingerboardCode, "Fingerboard Wood");
-    inlay = getObjValue("inlay", inlayCode, "Inlay");
-    bridge = getObjValue("bridge", bridgeCode, "Bridge");
-    color = getObjValue("color", colorCode, "Color");
-    hardware = getObjValue("hardware", hardwareCode, "Hardware");
-    treblepu = getObjValue("treblepu",treblepuCode, "Treble Pickup");
-    middlepu = getObjValue("middlepu",middlepuCode, "Middle Pickup");
-    basspu = getObjValue("basspu", basspuCode, "Bass Pickup");
-    elec = getObjValue("elec", elecCode, "Electronics");
+const getFieldValues = () => {
+    model = getValue("model", modelCode, "Model");
+    topWood = getValue("topWood", topWoodCode, "Top Wood");
+    frets = getValue("frets", fretsCode, "Frets");
+    topSpec = getValue("topSpec", topSpecCode, "Top Spec");
+    topGrade = getValue("topGrade", topGradeCode, "Top Grade");
+    neckWood = getValue("neckWood", neckWoodCode, "Neck Wood");
+    neckCarve = getValue("neckCarve", neckCarveCode, "Neck Carve");
+    fingerboard = getValue("fingerboard", fingerboardCode, "Fingerboard Wood");
+    inlay = getValue("inlay", inlayCode, "Inlay");
+    bridge = getValue("bridge", bridgeCode, "Bridge");
+    color = getValue("color", colorCode, "Color");
+    hardware = getValue("hardware", hardwareCode, "Hardware");
+    treblepu = getValue("treblepu",treblepuCode, "Treble Pickup");
+    middlepu = getValue("middlepu",middlepuCode, "Middle Pickup");
+    basspu = getValue("basspu", basspuCode, "Bass Pickup");
+    elec = getValue("elec", elecCode, "Electronics");
 };
-// removes whitespace replaces - with _ and everything is made uppercase
+// removes whitespace & replaces - with _
 const format = text => text.replace(/\s+/g,"").replace(/-/g, "_").toUpperCase();
 
 const decodeMODCAT = input => {
     getCodesFromString(input);
-    getObjValues();
+    getFieldValues();
     addFieldValuesToDOM();
 };
