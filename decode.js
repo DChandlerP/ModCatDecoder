@@ -44,25 +44,25 @@ const getCodesFromString = str => {
     elecCode = str.substring(19, 20);
 };
 
-const getValue = (str, code, spec) => prs[str + code] ? prs[str + code] : "Could not find " + spec + " '" + code + "'";
+const getValue = ( code, spec) => prs[code] ? prs[ code] : "Could not find " + spec + " '" + code + "'";
 
 const getFieldValues = () => {
-    model = getValue("model", modelCode, "Model");
-    topWood = getValue("topWood", topWoodCode, "Top Wood");
-    frets = getValue("frets", fretsCode, "Frets");
-    topSpec = getValue("topSpec", topSpecCode, "Top Spec");
-    topGrade = getValue("topGrade", topGradeCode, "Top Grade");
-    neckWood = getValue("neckWood", neckWoodCode, "Neck Wood");
-    neckCarve = getValue("neckCarve", neckCarveCode, "Neck Carve");
-    fingerboard = getValue("fingerboard", fingerboardCode, "Fingerboard Wood");
-    inlay = getValue("inlay", inlayCode, "Inlay");
-    bridge = getValue("bridge", bridgeCode, "Bridge");
-    color = getValue("color", colorCode, "Color");
-    hardware = getValue("hardware", hardwareCode, "Hardware");
-    treblepu = getValue("treblepu",treblepuCode, "Treble Pickup");
-    middlepu = getValue("middlepu",middlepuCode, "Middle Pickup");
-    basspu = getValue("basspu", basspuCode, "Bass Pickup");
-    elec = getValue("elec", elecCode, "Electronics");
+    model = getValue("model" + modelCode, "Model");
+    topWood = getValue("topWood" + topWoodCode, "Top Wood");
+    frets = getValue("frets" + fretsCode, "Frets");
+    topSpec = getValue("topSpec" + topSpecCode, "Top Spec");
+    topGrade = getValue("topGrade" + topGradeCode, "Top Grade");
+    neckWood = getValue("neckWood" + neckWoodCode, "Neck Wood");
+    neckCarve = getValue("neckCarve" + neckCarveCode, "Neck Carve");
+    fingerboard = getValue("fingerboard" + fingerboardCode, "Fingerboard Wood");
+    inlay = getValue("inlay" + inlayCode, "Inlay");
+    bridge = getValue("bridge" + bridgeCode, "Bridge");
+    color = getValue("color" + colorCode, "Color");
+    hardware = getValue("hardware" + hardwareCode, "Hardware");
+    treblepu = getValue("treblepu" + treblepuCode, "Treble Pickup");
+    middlepu = getValue("middlepu" + middlepuCode, "Middle Pickup");
+    basspu = getValue("basspu" + basspuCode, "Bass Pickup");
+    elec = getValue("elec" + elecCode, "Electronics");
 };
 // removes whitespace & replaces - with _
 const format = text => text.replace(/\s+/g,"").replace(/-/g, "_").toUpperCase();
