@@ -1,16 +1,60 @@
-h1 {
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.container-main {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.container-main p {
     text-align: center;
+}
+
+h1 {
+    font-weight: 300;
+    text-align: center;
+}
+
+#dataTable {
+    width: 100%;
 }
 
 table, th, td {
     border: none;
-    font-family: sans-serif;
+}
+
+table th, td {
+    border-bottom: 1px dotted #cccccc;
+    padding: 5px 0px;
 }
 
 td.label {
+    font-weight: 600;
     text-align: right;
 }
 
+#dataTable input[type='text'] {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#dataTable input[type='button'] {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 5px;
+    cursor: pointer;
+}
+
 span {
-    font-weight: bold;
+    font-weight: 400;
 }
