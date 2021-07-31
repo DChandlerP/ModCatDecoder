@@ -341,6 +341,7 @@ const prs = {
     colorWW : "White Wash",
     colorXR : "Special Run",
     colorYI : "Yellow Tiger",
+    colorY8 : "Cherry Charcoal Burst", // Wood Library 
 
     hardwareG : "Gold",
     hardwareH : "Hybrid (Nickel and Gold)",
