@@ -27,6 +27,7 @@ const prs = {
     modelD3 : "DC3",
     modelDG : "David Grissom",
     modelDN : "Dave Navarro",
+    modelEQ : "Modern Eagle Quatro",
     modelEX : "Experience PRS Limited",
     modelF3 : "NF3",
     modelFN : "509",
