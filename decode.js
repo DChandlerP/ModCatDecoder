@@ -26,6 +26,17 @@ const addFieldValuesToDOM = () => {
 
 const getCodesFromString = str => {
     str = format(str);
+
+    if (str.length < 20) {
+        numUnderscores = 20 - str.length;
+        underscores = "";
+        for ( i=0; i < numUnderscores; i++ ) {
+            underscores += "_";
+        }
+        str = [str.slice(0, 11), underscores, str.slice(11)].join('');
+        console.log("MODCAT reconstructed to " + str);
+    }
+
     modelCode = str.substring(0, 2);
     topWoodCode = str.substring(2, 3);
     fretsCode = str.substring(3, 4);
@@ -36,7 +47,9 @@ const getCodesFromString = str => {
     fingerboardCode = str.substring(8, 9);
     inlayCode = str.substring(9, 10);
     bridgeCode = str.substring(10, 11);
-    colorCode = str.substring(11, 15).replace(/_/g, "");
+    if ( colorCode != '____') {
+        colorCode = str.substring(11, 15).replace(/_/g, "");
+    }
     hardwareCode = str.substring(15, 16);
     treblepuCode = str.substring(16, 17);
     middlepuCode = str.substring(17, 18);

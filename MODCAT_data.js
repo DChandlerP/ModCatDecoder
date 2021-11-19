@@ -1,5 +1,6 @@
 const prs = {
     model18 : "KL1812",
+    model35 : "35th Anniversary Custom 24",
     model38 : "KL380",
     model48 : "408 Maple/Std Model",
     model4N : "Neal Schon 14",
@@ -430,7 +431,7 @@ const prs = {
     elec5 : "5-Way Rotary",
     elec7 : "Singlecut",
     elec9 : "509",
-    elecA : "Paul's", //May also be bass?
+    elecA : "Selector and Two Mini Toggle Coil-Tap Switches", // Paul's, 35th Anniversary
     elecB : "5-Way Blade or Grainger Bass 4/5",
     elecF : "513",
     elecH : "Henderson",
