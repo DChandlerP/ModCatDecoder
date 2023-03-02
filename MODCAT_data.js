@@ -65,6 +65,7 @@ const prs = {
     modelS2 : "SC Hollowbody II",
     modelS3 : "Santana 3",
     modelS4 : "Sunburst SC245",
+    modelS5 : "McCarty 594 Singlecut",
     modelS8 : "SC 58 or Stripped 58",
     modelSA : "Santana 2",
     modelSC : "Singlecut",
