@@ -304,6 +304,7 @@ const prs = {
     colorRI : "Red Tiger",
     colorRU : "Ruby",
     colorSB : "Smoke Burst",
+    colorSC: "Sinful Cinnamon",
     colorSE : "Sunset Burst",
     colorSF : "Solar Flare",
     colorSG : "Seafoam Green",
